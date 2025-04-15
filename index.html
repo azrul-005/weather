@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Detection</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="container">
+    <!-- Header with toggle on right -->
+    <header>
+      <h1 id="heading">Weather Detection Application</h1>
+      <button id="toggleTheme">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Search Section -->
+    <div id="searchSection">
+      <input type="text" id="cityInput" placeholder="Enter city" />
+      <button onclick="getWeatherByCity()">Get Weather</button>
+      <button onclick="getWeatherByLocation()">Use My Location</button>
+    </div>
+
+    <!-- Weather & Forecast -->
+    <div id="weatherData"></div>
+    <div id="forecast"></div>
+    <div id="alerts"></div>
+    <div id="graphContainer">
+      <canvas id="temperatureChart"></canvas>
+    </div>
+
+    <!-- Saved Locations -->
+    <div id="savedLocations">
+      <h3>Saved Locations</h3>
+      <ul id="savedList"></ul>
+      <button onclick="clearSaved()">Clear All</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
